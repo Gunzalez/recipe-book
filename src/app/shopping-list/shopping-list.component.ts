@@ -15,4 +15,8 @@ export class ShoppingListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  newIngredient(ingredient: Ingredient) {
+    this.ingredients.unshift(ingredient);
+  }
 }

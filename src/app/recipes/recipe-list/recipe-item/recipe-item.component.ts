@@ -16,5 +16,6 @@ export class RecipeItemComponent implements OnInit {
 
   selectRecipe(recipe: Recipe) {
     this.selectedRecipe.emit(recipe);
+    return false;
   }
 }
