@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-xs-12">
     <img
-      src="https://assets.epicurious.com/photos/57c5c6d9cf9e9ad43de2d96e/6:4/w_620%2Ch_413/the-ultimate-hamburger.jpg"
+      [src]="recipeToShow.imagePath"
       alt="stuff"
       class="img-responsive"
       style="max-height: 500px"
@@ -10,7 +10,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h4>Hamburger</h4>
+    <h2>{{ recipeToShow.name }}</h2>
   </div>
 </div>
 <div class="row">
@@ -29,7 +29,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <p>Description</p>
+    <p>{{ recipeToShow.description }}</p>
   </div>
 </div>
 <div class="row">
