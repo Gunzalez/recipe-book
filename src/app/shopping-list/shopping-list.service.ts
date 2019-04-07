@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 
 @Injectable({
@@ -6,17 +6,19 @@ import { Ingredient } from '../shared/ingredient.model';
 })
 export class ShoppingListService {
 
+  ingredientsChanged = new EventEmitter<Ingredient[]>();
+
   private ingredients: Ingredient[] = [
     new Ingredient('Bread', 8),
     new Ingredient('Tomatoes', 4)
   ];
 
   getIngredients() {
-    return this.ingredients;
+    return this.ingredients.slice();
   }
 
   addNewIngredient(ingredient: Ingredient) {
-    console.log(ingredient);
     this.ingredients.unshift(ingredient);
+    this.ingredientsChanged.emit(this.ingredients);
   }
 }
