@@ -12,6 +12,11 @@ export class ShoppingListService {
   ];
 
   getIngredients() {
-    return this.ingredients.slice();
+    return this.ingredients;
+  }
+
+  addNewIngredient(ingredient: Ingredient) {
+    console.log(ingredient);
+    this.ingredients.unshift(ingredient);
   }
 }

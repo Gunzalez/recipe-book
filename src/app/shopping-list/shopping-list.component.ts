@@ -16,7 +16,4 @@ export class ShoppingListComponent implements OnInit {
     this.ingredients = this.shoppingListService.getIngredients();
   }
 
-  // newIngredient(ingredient: Ingredient) {
-  //   this.ingredients.unshift(ingredient);
-  // }
 }
