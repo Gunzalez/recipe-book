@@ -10,7 +10,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h2>{{ recipeToShow.name }}</h2>
+    <h2>{{recipeToShow.name}}</h2>
   </div>
 </div>
 <div class="row">
@@ -20,7 +20,7 @@
         Manage Recipe <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li><a href="#">Add to Shopping List</a></li>
+        <li><a href="#" (click)="addToList()">Add to Shopping List</a></li>
         <li><a href="#">Edit Recipe</a></li>
         <li><a href="#">Delete Recipe</a></li>
       </ul>
@@ -29,11 +29,16 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <p>{{ recipeToShow.description }}</p>
+    <p>{{recipeToShow.description}}</p>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <p>Ingredients</p>
+    <h4>Ingredients</h4>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let ingredient of recipeToShow.ingredients">
+        {{ingredient.name}} - ({{ingredient.amount}})
+      </li>
+    </ul>
   </div>
 </div>

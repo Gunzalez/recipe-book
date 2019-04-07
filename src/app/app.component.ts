@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  pageToShow = 'shopping-list';
+  pageToShow = 'recipes';
 
   setPage(page) {
     this.pageToShow = page;
