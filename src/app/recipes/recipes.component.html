@@ -1,23 +1,15 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-
-      <div class="row">
-        <div class="col-md-5">
-          <app-recipe-list></app-recipe-list>
-        </div>
-        <div class="col-md-7">
-          <app-recipe-detail
+<div class="row">
+    <div class="col-md-5">
+        <app-recipe-list></app-recipe-list>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-detail
             *ngIf="recipeFromList; else inforText"
             [recipeToShow]="recipeFromList"
-          ></app-recipe-detail>
-          <ng-template #inforText>
+        ></app-recipe-detail>
+        <ng-template #inforText>
             <h3>Recipe details</h3>
             <p>Please pick a recipe</p>
-          </ng-template>
-        </div>
-      </div>
-
+        </ng-template>
     </div>
-  </div>
 </div>
