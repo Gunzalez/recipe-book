@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ToggleMenuDirective } from './shared/toggle-menu.directive';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ToggleMenuDirective } from './shared/toggle-menu.directive';
     HeaderComponent,
     RecipeDetailComponent,
     ShoppingEditComponent,
-    ToggleMenuDirective
+    ToggleMenuDirective,
+    RecipeStartComponent
   ],
   imports: [
     BrowserModule,
