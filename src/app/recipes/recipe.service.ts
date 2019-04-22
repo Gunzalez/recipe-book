@@ -8,9 +8,9 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 })
 export class RecipeService {
 
-  public selectedRecipe = new EventEmitter<Recipe>();
+    public selectedRecipe = new EventEmitter<Recipe>();
 
-  private recipes: Recipe[] = [
+    private recipes: Recipe[] = [
 
     new Recipe(
       'Hamburger',
@@ -31,15 +31,19 @@ export class RecipeService {
           new Ingredient('Fries', 20)
       ]
     )
-  ];
+    ];
 
-  constructor(private shoppingListService: ShoppingListService) { }
+    constructor(private shoppingListService: ShoppingListService) { }
 
-  getRecipes() {
-    return this.recipes.slice();
-  }
+    getRecipes() {
+        return this.recipes.slice();
+    }
 
-  addListOfIngredients(ingredients: Ingredient[]) {
-    this.shoppingListService.addListOfIngredients(ingredients);
-  }
+    addListOfIngredients(ingredients: Ingredient[]) {
+        this.shoppingListService.addListOfIngredients(ingredients);
+    }
+
+    getRecipeWithIndex(index: number) {
+        return this.recipes[index];
+    }
 }
