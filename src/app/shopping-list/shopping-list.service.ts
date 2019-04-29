@@ -9,13 +9,19 @@ export class ShoppingListService {
 
   ingredientsChanged = new Subject<Ingredient[]>();
 
+  ingredientToEdit = new Subject<number>();
+
   private ingredients: Ingredient[] = [
-    new Ingredient('Bread', 8),
+    new Ingredient('Apples', 8),
     new Ingredient('Tomatoes', 4)
   ];
 
   getIngredients() {
     return this.ingredients.slice();
+  }
+
+  getIngredient(index) {
+      return this.ingredients.slice()[index];
   }
 
   addNewIngredient(ingredient: Ingredient) {
