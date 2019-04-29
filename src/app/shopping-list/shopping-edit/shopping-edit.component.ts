@@ -50,4 +50,14 @@ export class ShoppingEditComponent implements OnInit {
     actionText() {
         return this.editingMode ? 'Update' : 'Add';
     }
+
+    onClearForm() {
+        this.ingredientForm.reset();
+        this.editingMode = false;
+    }
+
+    onDelete() {
+        this.shoppingListService.deleteIngredient(this.indexOfItemToBeEdited);
+        this.onClearForm();
+    }
 }
