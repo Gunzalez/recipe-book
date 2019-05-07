@@ -17,6 +17,9 @@
                                id="name"
                                formControlName="name"
                                class="form-control">
+                        <span class="error-span" *ngIf="!recipeForm.get('name').valid && recipeForm.get('name').touched">
+                            A name is required
+                        </span>
                     </div>
                 </div>
             </div>
@@ -28,6 +31,9 @@
                                id="image"
                                formControlName="imagePath"
                                class="form-control">
+                        <span class="error-span" *ngIf="!recipeForm.get('imagePath').valid && recipeForm.get('imagePath').touched">
+                            A valid image URL is required
+                        </span>
                     </div>
                 </div>
             </div>
@@ -47,6 +53,9 @@
                             rows="4"
                             formControlName="description"
                             id="description"></textarea>
+                        <span class="error-span" *ngIf="!recipeForm.get('description').valid && recipeForm.get('description').touched">
+                            A description is required
+                        </span>
                     </div>
                 </div>
             </div>
