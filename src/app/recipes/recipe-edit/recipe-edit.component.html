@@ -66,9 +66,9 @@
                     <div class="row" *ngFor="let ingredientCtrl of getIngredients(); let i = index" [formGroupName]="i" style="margin-top: 2px; margin-bottom: 2px;">
                         <div class="col-xs-5 col-md-8">
                             <div class="form-group">
-                                <label for="x" class="hidden"
+                                <label for="i" class="hidden"
                                 ></label>
-                                <input type="text" id="x" class="form-control" formControlName="name">
+                                <input type="text" id="i" class="form-control" formControlName="name">
                             </div>
                         </div>
                         <div class="col-xs-3 col-md-2">
@@ -79,7 +79,7 @@
                         </div>
                         <div class="col-xs-4 col-md-2">
                             <div class="form-group text-right">
-                                <button type="button" class="btn btn-danger">X</button>
+                                <button type="button" class="btn btn-danger" (click)="onDeleteIngredient(i)">X</button>
                             </div>
                         </div>
                     </div>
