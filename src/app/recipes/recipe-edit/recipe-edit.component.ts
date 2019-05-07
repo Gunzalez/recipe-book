@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import {ActivatedRoute, Params, Router} from '@angular/router';
 import {FormGroup, FormBuilder, Validators, FormArray, FormControl} from '@angular/forms';
 import {RecipeService} from '../recipe.service';
 import {Recipe} from '../recipe.model';
@@ -17,6 +17,7 @@ export class RecipeEditComponent implements OnInit {
     recipeForm: FormGroup;
 
     constructor(private route: ActivatedRoute,
+                private router: Router,
                 private fb: FormBuilder,
                 private recipeService: RecipeService) { }
 
@@ -84,11 +85,15 @@ export class RecipeEditComponent implements OnInit {
         } else {
             this.recipeService.addRecipe(newRecipe);
         }
+        this.clearAndLeave();
+    }
+
+    clearAndLeave() {
+        this.recipeForm.reset();
+        this.router.navigate(['../'], { relativeTo: this.route });
     }
 
     onCancel() {
-
-
-        this.recipeForm.reset();
+        this.clearAndLeave();
     }
 }
