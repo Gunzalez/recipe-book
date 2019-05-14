@@ -14,28 +14,30 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { ToggleMenuDirective } from './shared/toggle-menu.directive';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeItemComponent,
-    ShoppingListComponent,
-    HeaderComponent,
-    RecipeDetailComponent,
-    ShoppingEditComponent,
-    ToggleMenuDirective,
-    RecipeStartComponent,
-    RecipeEditComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    ReactiveFormsModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+    declarations: [
+        AppComponent,
+        RecipesComponent,
+        RecipeListComponent,
+        RecipeItemComponent,
+        ShoppingListComponent,
+        HeaderComponent,
+        RecipeDetailComponent,
+        ShoppingEditComponent,
+        ToggleMenuDirective,
+        RecipeStartComponent,
+        RecipeEditComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientModule,
+        AppRoutingModule
+    ],
+        providers: [],
+        bootstrap: [AppComponent]
+    })
 export class AppModule { }
