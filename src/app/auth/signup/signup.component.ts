@@ -16,7 +16,7 @@ export class SignupComponent implements OnInit {
     ngOnInit() {}
 
     onSubmit() {
-        this.authService.signUp(this.myForm.value.email, this.myForm.value.password);
+        this.authService.register(this.myForm.value.email, this.myForm.value.password);
         this.myForm.reset();
     }
 
