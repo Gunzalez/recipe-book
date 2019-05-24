@@ -8,17 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { RecipesModule } from './recipes/recipes.module';
 import { AuthModule } from './auth/auth.module';
 import { SharedModule } from './shared/shared.module';
+import { ShoppingListModule } from './shopping-list/shopping-edit/shopping-list.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { ShoppingListComponent } from './shopping-list/shopping-list.component';
-import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ShoppingListComponent,
-        ShoppingEditComponent,
         HeaderComponent
     ],
     imports: [
@@ -26,6 +23,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
         FormsModule,
         HttpClientModule,
         AuthModule,
+        ShoppingListModule,
         RecipesModule,
         AppRoutingModule,
         SharedModule
