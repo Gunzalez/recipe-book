@@ -7,11 +7,11 @@ import { AppComponent } from './app.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { HeaderComponent } from './header/header.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
-import { ToggleMenuDirective } from './shared/toggle-menu.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { RecipesModule } from './recipes/recipes.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -19,7 +19,6 @@ import { RecipesModule } from './recipes/recipes.module';
         ShoppingListComponent,
         HeaderComponent,
         ShoppingEditComponent,
-        ToggleMenuDirective,
         SignupComponent,
         SigninComponent
     ],
@@ -28,7 +27,8 @@ import { RecipesModule } from './recipes/recipes.module';
         FormsModule,
         HttpClientModule,
         RecipesModule,
-        AppRoutingModule
+        AppRoutingModule,
+        SharedModule
     ],
         providers: [],
         bootstrap: [AppComponent]
