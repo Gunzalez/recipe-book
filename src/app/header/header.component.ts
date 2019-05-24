@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {DataStorageService} from '../shared/data-storage.service';
 import { HttpResponse } from '@angular/common/http';
 import {AuthService} from '../auth/auth.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,8 @@ import {AuthService} from '../auth/auth.service';
 export class HeaderComponent implements OnInit {
 
     constructor(private dataStorage: DataStorageService,
-                private authService: AuthService) {}
+                private authService: AuthService,
+                private router: Router) {}
 
     ngOnInit() {
     }
@@ -27,5 +29,10 @@ export class HeaderComponent implements OnInit {
                 alert('Data saved');
             }
         });
+    }
+
+    onLogout() {
+        this.authService.logout();
+        this.router.navigate(['signin']);
     }
 }
