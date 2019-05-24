@@ -1,46 +1,33 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RecipesComponent } from './recipes/recipes.component';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
-import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { HeaderComponent } from './header/header.component';
-import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { ToggleMenuDirective } from './shared/toggle-menu.directive';
-import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
-import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
-import { RecipesRoutingModule } from './recipes/recipes-routing.module';
+import { RecipesModule } from './recipes/recipes.module';
 
 @NgModule({
     declarations: [
         AppComponent,
-        RecipesComponent,
-        RecipeListComponent,
-        RecipeItemComponent,
         ShoppingListComponent,
         HeaderComponent,
-        RecipeDetailComponent,
         ShoppingEditComponent,
         ToggleMenuDirective,
-        RecipeStartComponent,
-        RecipeEditComponent,
         SignupComponent,
         SigninComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
-        ReactiveFormsModule,
         HttpClientModule,
-        RecipesRoutingModule,
+        RecipesModule,
         AppRoutingModule
     ],
         providers: [],
