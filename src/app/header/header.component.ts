@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataStorageService} from '../shared/data-storage.service';
 import { HttpResponse } from '@angular/common/http';
+import {AuthService} from '../auth/auth.service';
 
 
 @Component({
@@ -10,7 +11,8 @@ import { HttpResponse } from '@angular/common/http';
 })
 export class HeaderComponent implements OnInit {
 
-    constructor(private dataStorage: DataStorageService) {}
+    constructor(private dataStorage: DataStorageService,
+                private authService: AuthService) {}
 
     ngOnInit() {
     }
