@@ -17,7 +17,7 @@ import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './auth/signup/signup.component';
 import { SigninComponent } from './auth/signin/signin.component';
-import { RecipeRoutingModule } from './recipes/recipe-routing.module';
+import { RecipesRoutingModule } from './recipes/recipes-routing.module';
 
 @NgModule({
     declarations: [
@@ -40,7 +40,7 @@ import { RecipeRoutingModule } from './recipes/recipe-routing.module';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        RecipeRoutingModule,
+        RecipesRoutingModule,
         AppRoutingModule
     ],
         providers: [],
